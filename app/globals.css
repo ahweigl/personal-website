@@ -71,7 +71,7 @@ html {
 
 @font-face {
   font-family: 'Wild Mango';
-  src: url('/WildMango.woff') format('woff');
+  src: url('/Swell.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -81,6 +81,18 @@ html {
   font-family: 'Wild Mango';
 }
 
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/Proxima-Nova.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-proxima-nova {
+  font-family: 'Proxima Nova';
+}
+
 .font-montserrat {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat'; 
 }
