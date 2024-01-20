@@ -4,7 +4,7 @@ import ProjectsCard from './ProjectsCard';
 const ExperienceCards = () => {
   return (
     <div id='projects' className='w-full flex flex-col items-center justify-center'>
-      <div className='font-notelia h-full w-full flex flex-col md:flex-row gap-10 px-10 mt-8'>
+      <div className='grid grid-cols-3 gap-10 px-10 mt-8'>
         <ProjectsCard
           src='/Akamai.png'
           title='Software Development Engineer in Test Co-op'
