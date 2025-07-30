@@ -116,18 +116,4 @@ html {
   font-family: 'Swell';
 }
 
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url('/Proxima-Nova.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
-.font-proxima-nova {
-  font-family: 'Proxima Nova';
-}
-
-.font-montserrat {
-  font-family: 'Montserrat'; 
-}
