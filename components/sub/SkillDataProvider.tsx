@@ -36,7 +36,8 @@ const animationDelay = 0.3
         src={src}
         width={width}
         height={height}
-        alt='skill image' />
+        alt='skill image'
+        className='w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20' />
     </motion.div>
   )
 }

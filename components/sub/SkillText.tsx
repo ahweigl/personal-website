@@ -2,8 +2,6 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
-import { SparklesIcon } from '@heroicons/react/24/solid'
 import { useInView } from 'react-intersection-observer'
 
 const SkillText = () => {
@@ -17,7 +15,7 @@ const SkillText = () => {
       }
 
     return (
-        <div className='w-full h-auto flex flex-col items-center justify-center font-swell flex flex-row gap-2 mt-15 text-6xl text-white max-w-[600px] w-auto h-auto'>
+        <div className='flex flex-col items-center justify-center font-swell gap-2 mt-15 text-4xl md:text-6xl text-white max-w-[600px] w-auto h-auto'>
              <motion.div
     ref={ref}
     initial='hidden'
