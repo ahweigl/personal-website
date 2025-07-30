@@ -19,17 +19,16 @@ const HeroContent = () => {
   <Image src="/Sparkle.gif" alt="GIF Icon" width={100} height={10} layout="fixed" className="ml-4"/>
 </motion.div>
         <motion.p variants={slideInFromLeft(0.8)} className="font-proxima-nova text-lg text-gray-400 max-w-[750px]">
-          I<span className="font-montserrat text-lg text-gray-400/">&apos;</span>m a second<span className="font-montserrat text-lg text-gray-400/">-</span>year Honors CS and Business major at Northeastern University in Boston. 
-          Currently, you can find me developing software for Akamai<span className="font-montserrat text-lg text-gray-400/">&apos;</span>s Application Security team, leading Northeastern<span className="font-montserrat text-lg text-gray-400/">&apos;</span>s 
-          Sandbox software consultancy as Operations Director, and volunteering as Northeastern<span className="font-montserrat text-lg text-gray-400/">&apos;</span>s NCWIT Campus Rep.
+          I<span className="font-montserrat text-lg text-gray-400/">&apos;</span>m a fourth<span className="font-montserrat text-lg text-gray-400/">-</span>year Honors CS and Business major at Northeastern University, combining my love for technology and creativity to build digital experiences that make a difference. 
+          My previous experience spans fullstack development across multiple domains at companies like WHOOP, Apple, Akamai, Lockheed Martin Space, and NIST.
          </motion.p>
         <motion.p variants={slideInFromLeft(0.8)} className="font-proxima-nova text-lg text-gray-400 max-w-[750px]">
-          My experience lies in leadership, full<span className="font-montserrat text-lg text-gray-400/">-</span>stack web development, object<span className="font-montserrat text-lg text-gray-400/">-</span>oriented programming, agile methodologies, autonomous systems, and hardware integration.
-          I<span className="font-montserrat text-lg text-gray-400/">&apos;</span>m interested in further exploring other aspects of software engineering and product management. In my free time, I love hiking in my home state of Colorado, collecting vinyl records and houseplants, curating niche Spotify playlists, and searching for the best gluten free pasta. 
+          Currently, you can find me developing for Reddit<span className="font-montserrat text-lg text-gray-400/">&apos;</span>s Safety team in NYC, leading Sandbox at Northeastern building nonprofit software solutions for our community, and championing inclusion in tech as Northeastern<span className="font-montserrat text-lg text-gray-400/">&apos;</span>s NCWIT Campus Rep. 
+          In my free time, I love hiking in my home state of Colorado, collecting vinyl records and houseplants, curating niche Spotify playlists, and searching for the best gluten free pasta. 
         </motion.p>
-     <motion.a  href="/Angela_Weigl_Resume.pdf" download="Angela_Weigl_Resume.pdf" variants={slideInFromLeft(1)} className="font-swell text-2xl py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
+     {/* <motion.a  href="/Angela_Weigl_Resume.pdf" download="Angela_Weigl_Resume.pdf" variants={slideInFromLeft(1)} className="font-swell text-2xl py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
           My Resume
-        </motion.a>
+        </motion.a> */}
       </div>
       <motion.div variants={slideInFromRight(0.8)} className="w-full h-full flex justify-center items-center"> 
         <Image src="/Headshot.png" alt="headshot" height={450} width={450} />

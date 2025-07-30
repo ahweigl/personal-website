@@ -1,6 +1,5 @@
 import React from 'react'
 import ExperienceText from '../sub/ExperienceText'
-import ProjectsCard from '../sub/ProjectsCard'
 import ExperienceCards from '../sub/ExperienceCards'
 
 const Experience = () => {

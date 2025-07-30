@@ -14,8 +14,8 @@ const Footer = () => {
         
             
 
-            <div className='mb[20px] text-[15px] text-center'>
-                &copy; Angela Weigl 2023. Built using Create Next App, React, Framer
+            <div className='mb-[20px] text-[15px] text-center'>
+                &copy; Angela Weigl 2025. Built with Next.js, React, and Framer Motion
             </div>
         </div>
   
