@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import HeroContent from '../sub/HeroContent'
 import StarBackground from './StarBackground'
@@ -9,6 +9,7 @@ import SecondaryBio from './SecondaryBio'
 
 const Hero = () => {
   const { scrollYProgress } = useScroll()
+  const [heroText, setHeroText] = useState("Angela\nWeigl")
   
   // Custom easing function that starts fast and slows down
   const fastToSlowEase = (t: number) => 1 - Math.pow(1 - t, 3)
@@ -58,7 +59,7 @@ const Hero = () => {
             left: heroContentLeft
           }}
         >
-            <HeroContent scrollProgress={fontSize}/>
+            <HeroContent scrollProgress={fontSize} heroText={heroText}/>
         </motion.div>
         
         <motion.div 
@@ -92,6 +93,19 @@ const Hero = () => {
           }}
         >
             <SecondaryBio/>
+        </motion.div>
+
+        <motion.div 
+          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] py-20 md:mt-[100px] px-6 md:px-20'
+          onViewportEnter={() => setHeroText("Experience")}
+          onViewportLeave={() => setHeroText("Angela\nWeigl")}
+          viewport={{ amount: 0.3 }}
+        >
+          <div className='max-w-[800px] w-full flex flex-col gap-8'>
+            <h2 className="font-tt-ramillas-light text-4xl md:text-6xl text-white text-center">
+              Experience
+            </h2>
+          </div>
         </motion.div>
         
         <div className='h-[300vh]'></div>
