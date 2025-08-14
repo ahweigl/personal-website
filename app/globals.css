@@ -10,6 +10,10 @@ html {
   html, body, * {
     cursor: none !important;
   }
+  
+  nav, nav *, .navbar, .navbar * {
+    cursor: pointer !important;
+  }
 }
 
 @font-face {
@@ -40,6 +44,26 @@ html {
 .font-tt-ramillas-light {
   font-family: 'TT Ramillas';
   font-weight: 300;
+}
+
+/* Navbar hover pulse and glow animations */
+@keyframes navPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+  }
+}
+
+.nav-pulse-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-pulse-hover:hover {
+  animation: navPulse 1.5s ease-in-out infinite;
 }
 
 

@@ -51,13 +51,13 @@ const Navbar = () => {
     return (
         <AnimatePresence>
             <motion.div
-                className='w-full h-[65px] fixed top-0 shadow-lg shadow-white/40 bg-[#03001417 backdrop-blur-md z-50 px-6 md:px-10'
+                className='navbar w-full h-[65px] fixed top-0 shadow-lg shadow-white/40 bg-[#03001417 backdrop-blur-md z-50 px-6 md:px-10'
                 variants={navbarVariants}
                 initial="visible"
                 animate={isVisible ? "visible" : "hidden"}
             >
                 <div className='w-full h-full flex flex-row items-center justify-between m-auto px-[10px]'>
-                    <a href='#about-me' className='h-auto w-auto flex flex-row items-center'>
+                    <a href='#about-me' className='h-auto w-auto flex flex-row items-center nav-pulse-hover'>
                         <span className='font-tt-ramillas-light text-xl text-gray-300'>
                             Angela Weigl
                         </span>
@@ -65,7 +65,7 @@ const Navbar = () => {
 
                     <div className='flex flex-row gap-3 md:gap-5'>
                         {Socials.map((social) => (
-                            <a href={social.link} key={social.name} target='_blank' rel='noopener noreferrer'>
+                            <a href={social.link} key={social.name} target='_blank' rel='noopener noreferrer' className='nav-pulse-hover'>
                                 <Image src={social.src} alt={social.name} height={20} width={20} className='md:h-6 md:w-6' />
                             </a>
                         ))}

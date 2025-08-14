@@ -66,6 +66,7 @@ const CursorStar: React.FC = () => {
   const [enabled, setEnabled] = useState(true)
   const [isStationary, setIsStationary] = useState(false)
   const [pulseScale, setPulseScale] = useState(1)
+  const [isOverNavbar, setIsOverNavbar] = useState(false)
 
   const targetRef = useRef<Point>({ x: -100, y: -100 })
   const rafRef = useRef<number | null>(null)
@@ -83,6 +84,10 @@ const CursorStar: React.FC = () => {
 
     const handleMouseMove = (e: MouseEvent) => {
       targetRef.current = { x: e.clientX, y: e.clientY }
+      
+      const target = e.target as Element
+      const isOverNav = target?.closest('.navbar') !== null
+      setIsOverNavbar(isOverNav)
     }
 
     const updatePosition = () => {
@@ -155,11 +160,11 @@ const CursorStar: React.FC = () => {
     }
   }, [isStationary])
 
-  if (!enabled) return null
+    if (!enabled || isOverNavbar) return null
 
   return (
-    <div
-      aria-hidden
+    <div 
+      aria-hidden 
       className="pointer-events-none fixed top-0 left-0 z-[9999]"
     >
       {trail.map((point, index) => (
