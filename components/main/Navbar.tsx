@@ -13,8 +13,12 @@ const Navbar = () => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY
 
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                setIsVisible(false)
+            if (window.innerWidth >= 768) {
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    setIsVisible(false)
+                } else {
+                    setIsVisible(true)
+                }
             } else {
                 setIsVisible(true)
             }

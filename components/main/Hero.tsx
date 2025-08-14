@@ -26,7 +26,7 @@ const Hero = () => {
   const fontSize = useTransform(scrollYProgress, [0, 0.28], [1, 0.8], {
     ease: fastToSlowEase
   })
-  // Bio: starts visible at bottom early, reaches peak very early and stays full longer
+  // Bio: Desktop animation vs Mobile always visible
   const bioOpacity = useTransform(scrollYProgress, [0.03, 0.08, 0.14, 0.45], [0, 0.4, 1, 0], {
     ease: fastToSlowEase
   })
@@ -50,10 +50,9 @@ const Hero = () => {
   return (
     <div id='about-me' className='relative w-full overflow-hidden'>
         <StarBackground />
-        
-        {/* Hero Content - Dynamic positioning */}
+  
         <motion.div 
-          className='h-screen fixed top-0 left-0 flex items-center justify-start p-6 md:p-20 z-[20]'
+          className='hidden md:flex h-screen fixed top-0 left-0 items-center justify-start p-6 md:p-20 z-[20]'
           style={{
             width: heroContentWidth,
             left: heroContentLeft
@@ -62,33 +61,39 @@ const Hero = () => {
             <HeroContent scrollProgress={fontSize}/>
         </motion.div>
         
-        {/* Right Column - Bio section */}
         <motion.div 
-          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] mt-[100vh] px-6 md:px-20'
+          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] min-h-screen md:mt-[500px] px-6 md:px-20'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
           style={{
-            opacity: bioOpacity,
-            scale: bioScale,
-            y: bioY,
-            transformOrigin: 'center',
-            willChange: 'transform, opacity, transform'
+            ...(typeof window !== 'undefined' && window.innerWidth >= 768 ? {
+              opacity: bioOpacity,
+              scale: bioScale,
+              y: bioY,
+            } : {})
           }}
         >
             <Bio/>
         </motion.div>
 
-        {/* Right Column - SecondaryBio section - positioned right after Bio */}
         <motion.div 
-          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] mt-[200px] px-6 md:px-20'
+          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] min-h-screen md:mt-[50px] px-6 md:px-20'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 1 }}
           style={{
-            opacity: secondaryBioOpacity,
-            scale: secondaryBioScale,
-            y: secondaryBioY
+            ...(typeof window !== 'undefined' && window.innerWidth >= 768 ? {
+              opacity: secondaryBioOpacity,
+              scale: secondaryBioScale,
+              y: secondaryBioY,
+            } : {})
           }}
         >
             <SecondaryBio/>
         </motion.div>
         
-        {/* Spacer for hero content and bio sections */}
         <div className='h-[300vh]'></div>
     </div>
   )
