@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import HeroContent from '../sub/HeroContent'
 import StarBackground from './StarBackground'
@@ -9,6 +9,7 @@ import SecondaryBio from './SecondaryBio'
 
 const Hero = () => {
   const { scrollYProgress } = useScroll()
+  const [heroText, setHeroText] = useState("Angela\nWeigl")
   
   // Custom easing function that starts fast and slows down
   const fastToSlowEase = (t: number) => 1 - Math.pow(1 - t, 3)
@@ -58,11 +59,11 @@ const Hero = () => {
             left: heroContentLeft
           }}
         >
-            <HeroContent scrollProgress={fontSize}/>
+            <HeroContent scrollProgress={fontSize} heroText={heroText}/>
         </motion.div>
         
         <motion.div 
-          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] min-h-screen md:mt-[500px] px-6 md:px-20'
+          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] min-h-screen md:mt-[550px] px-6 md:px-20'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -78,7 +79,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div 
-          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] min-h-screen md:mt-[50px] px-6 md:px-20'
+          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] min-h-screen md:mt-[100px] px-6 md:px-20'
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -92,6 +93,83 @@ const Hero = () => {
           }}
         >
             <SecondaryBio/>
+        </motion.div>
+
+        <motion.div 
+          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] py-20 md:mt-[200px] px-6 md:px-20'
+          onViewportEnter={() => setHeroText("Experience")}
+          onViewportLeave={() => setHeroText("Angela\nWeigl")}
+          viewport={{ amount: 0.5 }}
+        >
+          <div className='max-w-[800px] w-full flex flex-col gap-8'>
+            <div className="bg-white bg-opacity-5 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-15 relative">
+              <div className="absolute top-4 right-4">
+                <span className="bg-white bg-opacity-10 px-3 py-1 rounded-full text-xs font-tt-ramillas-extralight text-gray-300">
+                  May - August 2025
+                </span>
+              </div>
+              <h3 className="font-tt-ramillas-light text-2xl md:text-3xl text-white mb-2">
+                Reddit
+              </h3>
+              <p className="font-tt-ramillas-extralight text-lg text-gray-300 mb-3">
+                Software Engineer Intern • NYC
+              </p>
+              <p className="font-tt-ramillas-extralight text-sm text-gray-400 leading-relaxed">
+                Developed & shipped new ban evasion reporting flow for Safety experiences team to support deleted user reporting and make Reddit a safer platform.
+              </p>
+            </div>
+
+            <div className="bg-white bg-opacity-5 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-15 relative">
+              <div className="absolute top-4 right-4">
+                <span className="bg-white bg-opacity-10 px-3 py-1 rounded-full text-xs font-tt-ramillas-extralight text-gray-300">
+                  January - May 2025
+                </span>
+              </div>
+              <h3 className="font-tt-ramillas-light text-2xl md:text-3xl text-white mb-2">
+                WHOOP
+              </h3>
+              <p className="font-tt-ramillas-extralight text-lg text-gray-300 mb-3">
+                Software Engineer Co-op • Boston
+              </p>
+              <p className="font-tt-ramillas-extralight text-sm text-gray-400 leading-relaxed">
+                Contributed to production of new join/upgrade flow for WHOOP&apos;s 5.0 product launch using Next.JS, React, TypeScript, & Java.
+              </p>
+            </div>
+
+            <div className="bg-white bg-opacity-5 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-15 relative">
+              <div className="absolute top-4 right-4">
+                <span className="bg-white bg-opacity-10 px-3 py-1 rounded-full text-xs font-tt-ramillas-extralight text-gray-300">
+                  June - August 2024
+                </span>
+              </div>
+              <h3 className="font-tt-ramillas-light text-2xl md:text-3xl text-white mb-2">
+                Apple
+              </h3>
+              <p className="font-tt-ramillas-extralight text-lg text-gray-300 mb-3">
+                Software Engineer Intern • San Diego
+              </p>
+              <p className="font-tt-ramillas-extralight text-sm text-gray-400 leading-relaxed">
+                Developed full-stack feature end-to-end for Creativity Apps team using React, TypeScript, PostgreSQL, & Radix UI.
+              </p>
+            </div>
+
+            <div className="bg-white bg-opacity-5 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-15 relative">
+              <div className="absolute top-4 right-4">
+                <span className="bg-white bg-opacity-10 px-3 py-1 rounded-full text-xs font-tt-ramillas-extralight text-gray-300">
+                  January - May 2024
+                </span>
+              </div>
+              <h3 className="font-tt-ramillas-light text-2xl md:text-3xl text-white mb-2">
+                Akamai Technologies
+              </h3>
+              <p className="font-tt-ramillas-extralight text-lg text-gray-300 mb-3">
+                Software Development Engineer in Test Co-op • Boston
+              </p>
+              <p className="font-tt-ramillas-extralight text-sm text-gray-400 leading-relaxed">
+                Led redesign of E2E frontend testing systems for Application Security team, App & API Protector.
+              </p>
+            </div>
+          </div>
         </motion.div>
         
         <div className='h-[300vh]'></div>
