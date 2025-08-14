@@ -132,7 +132,7 @@ const Hero = () => {
                 Software Engineer Co-op • Boston
               </p>
               <p className="font-tt-ramillas-extralight text-sm text-gray-400 leading-relaxed">
-                Contributed to production of new join/upgrade flow for WHOOP's 5.0 product launch using Next.JS, React, TypeScript, & Java.
+                Contributed to production of new join/upgrade flow for WHOOP&apos;s 5.0 product launch using Next.JS, React, TypeScript, & Java.
               </p>
             </div>
 
