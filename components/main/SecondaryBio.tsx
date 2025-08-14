@@ -21,7 +21,7 @@ const SecondaryBio = () => {
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
         >
           {SECONDARY_BIO_TEXT}
-          <span className='block mt-6 opacity-60 italic'>Keep scrolling to learn more about me!</span>
+          {/* <span className='block mt-6 opacity-60 italic'>Keep scrolling to learn more about me!</span> */}
         </motion.p>
       </div>
     </motion.div>
