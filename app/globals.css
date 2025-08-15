@@ -11,7 +11,7 @@ html {
     cursor: none !important;
   }
   
-  nav, nav *, .navbar, .navbar * {
+  nav, nav *, .navbar, .navbar *, .music-player, .music-player * {
     cursor: pointer !important;
   }
 }
