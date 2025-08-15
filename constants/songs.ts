@@ -37,4 +37,10 @@ export const backgroundSongs: Song[] = [
     artist: "Interpol",
     src: "/Obstacle 1 (2012 Remaster).mp3",
   },
+   {
+    id: "track-6",
+    title: "Misnomer",
+    artist: "The Brook & The Bluff",
+    src: "/The Brook & The Bluff - Misnomer (Official Video).mp3",
+  }
 ];

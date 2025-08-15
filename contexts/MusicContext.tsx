@@ -45,10 +45,18 @@ export const MusicProvider: React.FC<MusicProviderProps> = ({
 }) => {
   const [isPlaying, setIsPlaying] = useState(autoStart);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
-  const [tracks, setTracks] = useState<Song[]>(shuffleArray(defaultTracks));
+  const [tracks, setTracks] = useState<Song[]>(defaultTracks);
   const [isVisible, setIsVisible] = useState(true);
+  const [isClientInitialized, setIsClientInitialized] = useState(false);
 
   const currentTrack = tracks[currentTrackIndex] || null;
+
+  useEffect(() => {
+    if (!isClientInitialized && defaultTracks.length > 0) {
+      setTracks(shuffleArray(defaultTracks));
+      setIsClientInitialized(true);
+    }
+  }, [defaultTracks, isClientInitialized]);
 
   const play = () => {
     setIsPlaying(true);
@@ -77,7 +85,7 @@ export const MusicProvider: React.FC<MusicProviderProps> = ({
   };
 
   const setTracksHandler = (newTracks: Song[]) => {
-    setTracks(shuffleArray(newTracks));
+    setTracks(isClientInitialized ? shuffleArray(newTracks) : newTracks);
     setCurrentTrackIndex(0);
     setIsPlaying(false);
   };
