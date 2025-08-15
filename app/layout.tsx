@@ -6,6 +6,9 @@ import Navbar from '@/components/main/Navbar'
 import Footer from '@/components/main/Footer'
 import ScrollReset from '@/components/main/ScrollReset'
 import CursorStar from '@/components/main/CursorStar'
+import BackgroundMusicPlayer from '@/components/main/BackgroundMusicPlayer'
+import { MusicProvider } from '@/contexts/MusicContext'
+import { backgroundSongs } from '@/constants/songs'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,12 +30,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-[#000914] overflow-y-scroll overflow-x-hidden`}>
-        <ScrollReset />
-        <CursorStar />
-        {children}
-        <StarsCanvas />
-        <Navbar />
-        <Footer />
+        <MusicProvider 
+          defaultTracks={backgroundSongs}
+          autoStart={false}
+        >
+          <ScrollReset />
+          <CursorStar />
+          {children}
+          <StarsCanvas />
+          <Navbar />
+          <Footer />
+          <BackgroundMusicPlayer />
+        </MusicProvider>
       </body>
     </html>
   )

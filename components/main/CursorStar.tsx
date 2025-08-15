@@ -87,7 +87,8 @@ const CursorStar: React.FC = () => {
       
       const target = e.target as Element
       const isOverNav = target?.closest('.navbar') !== null
-      setIsOverNavbar(isOverNav)
+      const isOverMusicPlayer = target?.closest('.music-player') !== null
+      setIsOverNavbar(isOverNav || isOverMusicPlayer)
     }
 
     const updatePosition = () => {
