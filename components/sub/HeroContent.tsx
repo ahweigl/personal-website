@@ -10,6 +10,7 @@ interface HeroContentProps {
 
 const HeroContent = ({ scrollProgress, heroText = "Angela\nWeigl" }: HeroContentProps) => {
   const isExperience = heroText === "Experience";
+  const isLeadership = heroText === "Leadership";
   
   return (
     <motion.div
@@ -28,11 +29,11 @@ const HeroContent = ({ scrollProgress, heroText = "Angela\nWeigl" }: HeroContent
           transition={{ 
             duration: 0.5, 
             delay: 0.2,
-            ease: [0.25, 0.46, 0.45, 0.94] // Custom easing for smooth flip
+            ease: [0.25, 0.46, 0.45, 0.94] 
           }}
           className={`font-tt-ramillas-light flex flex-col gap-2 ${
-            isExperience 
-              ? 'text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-left w-full' 
+            isExperience || isLeadership
+              ? 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-left w-full' 
               : 'text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] text-center'
           } text-white select-none`}
           style={{
