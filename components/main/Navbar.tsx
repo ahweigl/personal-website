@@ -61,11 +61,11 @@ const Navbar = () => {
                 animate={isVisible ? "visible" : "hidden"}
             >
                 <div className='w-full h-full flex flex-row items-center justify-between m-auto px-[10px]'>
-                    <a href='#about-me' className='h-auto w-auto flex flex-row items-center nav-pulse-hover'>
+                    <div className='h-auto w-auto flex flex-row items-center'>
                         <span className='font-tt-ramillas-light text-xl text-gray-300'>
                             Angela Weigl
                         </span>
-                    </a>
+                    </div>
 
                     <div className='flex flex-row gap-3 md:gap-5'>
                         {Socials.map((social) => (
