@@ -8,6 +8,7 @@ import Bio from './Bio'
 import SecondaryBio from './SecondaryBio'
 import ExperienceCards from './ExperienceCards'
 import LeadershipCards from './LeadershipCards'
+import WhatImSection from './WhatImSection'
 
 const Hero = () => {
   const { scrollYProgress } = useScroll()
@@ -33,6 +34,8 @@ const Hero = () => {
       const experienceStart = windowHeight * 2; 
       const leadershipStart = windowHeight * 4; 
       const leadershipEnd = windowHeight * 6; 
+      const whatImStart = windowHeight * 6;
+      const whatImEnd = windowHeight * 8;
       
       if (scrollY < experienceStart) {
         setHeroText("Angela\nWeigl");
@@ -40,7 +43,9 @@ const Hero = () => {
         setHeroText("Experience");
       } else if (scrollY >= leadershipStart && scrollY < leadershipEnd) {
         setHeroText("Leadership");
-      } else if (scrollY >= leadershipEnd) {
+      } else if (scrollY >= whatImStart && scrollY < whatImEnd) {
+        setHeroText("What I'm...");
+      } else if (scrollY >= whatImEnd) {
         setHeroText("Angela\nWeigl");
       }
     };
@@ -93,6 +98,16 @@ const Hero = () => {
           className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] py-20 md:mt-[400px] px-6 md:px-20'
         >
           <LeadershipCards />
+        </motion.div>
+
+        <motion.div 
+          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] py-20 md:mt-[400px] px-6 md:px-20'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+        >
+          <WhatImSection />
         </motion.div>
         
         <div className='h-[300vh]'></div>
