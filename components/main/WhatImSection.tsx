@@ -13,22 +13,22 @@ interface WhatImItem {
 const whatImData: WhatImItem[] = [
   {
     category: "listening to",
-    items: ["The Strokes", "Del Water Gap", "Jeff Buckley", "Dijon", "The Brook & The Bluff", "Olivia Dean", "Magdalena Bay", "The Marias"],
+    items: ["The Strokes", "Del Water Gap", "Jeff Buckley", "Dijon", "Harry Styles", "The Brook & The Bluff", "Olivia Dean", "Magdalena Bay", "The Marias"],
     icon: "/headphones-icon.png"
   },
   {
     category: "reading",
-    items: ["Cosmos by Carl Sagan", "Chaos Monkeys by Antonio Garcia Martinez", "Invisible Women: Data Bias in a World Designed for Men by Caroline Criado Perez"],
+    items: ["Designing Your Life by Bill Burnett and Dave Evans", "Cosmos by Carl Sagan", "Invisible Women: Data Bias in a World Designed for Men by Caroline Criado Perez"],
     icon: "/book-icon.png"
   },
   {
     category: "eating",
-    items: ["Vanilla cold brew", "Thai food", "Acai bowls", "Anything with protein", "Trader Joes korean food", "Frozen grapes"],
+    items: ["thai food", "vanilla cold brew", "acai bowls", "anything with protein in my Ninja Creami", "Trader Joes korean food", "frozen grapes"],
     icon: "/food-icon.png"
   },
   {
     category: "enjoying",
-    items: ["Bouldering", "Colorado sunsets", "My cat Gibson", "r/fujifilm", "Chipping away at my Letterboxd watchlist", "Maintaining my 40+ week Beli streak"],
+    items: ["my cat Gibson", "yoga", "my fujifilm x100v camera", "skiing wherever I can", "bouldering", "chipping away at my Letterboxd watchlist", "maintaining my 60+ week Beli streak"],
     icon: "/sparkle-icon.png"
   }
 ]

@@ -24,7 +24,15 @@ const LeadershipCards = () => {
               Tech Director, May 2025 - Present
             </p>
             <p className="font-tt-ramillas-extralight text-sm text-gray-400 leading-relaxed">
-              Leading 50+ developers, UI/UX, and brand designers building 6 full-stack projects, ranging from course scheduling to co-op reviews at Northeastern. Check us out at sandboxnu.com!
+              Leading 75+ developers, UI/UX, and brand designers building 7 full-stack projects, ranging from course scheduling to co-op reviews at Northeastern. Check us out at sandboxnu.com!
+            </p>
+          </div>
+          <div>
+            <p className="font-tt-ramillas-extralight text-sm text-gray-300 font-medium mb-1">
+              Project Lead, January 2026 - Present
+            </p>
+            <p className="font-tt-ramillas-extralight text-sm text-gray-400 leading-relaxed">
+              Leading 10 talented developers and designers working on Pyret, an introductory programming language used by all CS students at Northeastern and beyond. 
             </p>
           </div>
           <div>
