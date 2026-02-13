@@ -13,7 +13,7 @@ interface WhatImItem {
 const whatImData: WhatImItem[] = [
   {
     category: "listening to",
-    items: ["The Strokes", "Del Water Gap", "Jeff Buckley", "Dijon", "Harry Styles", "The Brook & The Bluff", "Olivia Dean", "Magdalena Bay", "The Marias"],
+    items: ["The Strokes", "Del Water Gap", "Jeff Buckley", "Dijon", "Harry Styles", "The Brook & The Bluff", "Olivia Dean", "Magdalena Bay"],
     icon: "/headphones-icon.png"
   },
   {
@@ -23,12 +23,12 @@ const whatImData: WhatImItem[] = [
   },
   {
     category: "eating",
-    items: ["thai food", "vanilla cold brew", "acai bowls", "anything with protein in my Ninja Creami", "Trader Joes korean food", "frozen grapes"],
+    items: ["thai food", "vanilla cold brew", "anything with protein in my Ninja Creami", "Trader Joes korean food", "frozen grapes"],
     icon: "/food-icon.png"
   },
   {
     category: "enjoying",
-    items: ["my cat Gibson", "yoga", "my fujifilm x100v camera", "skiing wherever I can", "bouldering", "chipping away at my Letterboxd watchlist", "maintaining my 60+ week Beli streak"],
+    items: ["my cat Gibson", "yoga", "my fujifilm x100v camera", "skiing wherever I can", "bouldering", "maintaining my 65+ week Beli streak"],
     icon: "/sparkle-icon.png"
   }
 ]
