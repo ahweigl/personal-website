@@ -1,116 +1,50 @@
 "use client"
 
-import React, { useState, useEffect } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import HeroContent from '../sub/HeroContent'
 import StarBackground from './StarBackground'
-import Bio from './Bio'
-import SecondaryBio from './SecondaryBio'
 import ExperienceCards from './ExperienceCards'
 import LeadershipCards from './LeadershipCards'
 import WhatImSection from './WhatImSection'
+import StickySection from './StickySection'
+
+const BIO = "I'm a full-stack developer and Honors CS and Business student at Northeastern University, combining my love for technology and creativity to build digital experiences that make a difference."
+const BIO_2 = "Currently, you can find me leading Sandbox at Northeastern building nonprofit software solutions for our community and preparing to graduate in Spring 2026. In my free time, I love hiking in my home state of Colorado, collecting vinyl records, and digital photography on my Fujifilm camera."
 
 const Hero = () => {
-  const { scrollYProgress } = useScroll()
-  const [heroText, setHeroText] = useState("Angela\nWeigl")
-  
-  const fastToSlowEase = (t: number) => 1 - Math.pow(1 - t, 3)
-
-  const heroContentWidth = useTransform(scrollYProgress, [0, 0.28], ['100%', '50%'], {
-    ease: fastToSlowEase
-  })
-  const heroContentLeft = useTransform(scrollYProgress, [0, 0.28], ['0%', '0%'], {
-    ease: fastToSlowEase
-  })
-  const fontSize = useTransform(scrollYProgress, [0, 0.28], [1, 0.8], {
-    ease: fastToSlowEase
-  })
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
-      
-      const experienceStart = windowHeight * 2; 
-      const leadershipStart = windowHeight * 4; 
-      const leadershipEnd = windowHeight * 6; 
-      const whatImStart = windowHeight * 6;
-      const whatImEnd = windowHeight * 8;
-      
-      if (scrollY < experienceStart) {
-        setHeroText("Angela\nWeigl");
-      } else if (scrollY >= experienceStart && scrollY < leadershipStart) {
-        setHeroText("Experience");
-      } else if (scrollY >= leadershipStart && scrollY < leadershipEnd) {
-        setHeroText("Leadership");
-      } else if (scrollY >= whatImStart && scrollY < whatImEnd) {
-        setHeroText("What I'm...");
-      } else if (scrollY >= whatImEnd) {
-        setHeroText("Angela\nWeigl");
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div id='about-me' className='relative w-full overflow-hidden'>
-        <StarBackground />
-  
-        <motion.div 
-          className='hidden md:flex h-screen fixed top-0 left-0 items-center justify-start p-6 md:p-20 z-[20]'
-          style={{
-            width: heroContentWidth,
-            left: heroContentLeft
-          }}
-        >
-            <HeroContent scrollProgress={fontSize} heroText={heroText}/>
-        </motion.div>
-        
-        <motion.div 
-          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] min-h-screen md:mt-[550px] px-6 md:px-20'
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-        >
-            <Bio/>
-        </motion.div>
+    <div id='about-me' className='relative w-full'>
 
-        <motion.div 
-          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] min-h-screen px-6 md:px-20'
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-        >
-            <SecondaryBio/>
-        </motion.div>
+      {/* Hero — sticky within wrapper so Experience slides over it */}
+      <div data-hero-wrapper style={{ position: 'relative', zIndex: 10, minHeight: '400vh' }}>
+        <div className='sticky top-0 h-screen overflow-hidden'>
+          <StarBackground />
 
-        <motion.div 
-          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] py-20 md:mt-[200px] px-6 md:px-20'
-        >
-          <ExperienceCards />
-        </motion.div>
-        
-        <motion.div 
-          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] py-20 md:mt-[400px] px-6 md:px-20'
-        >
-          <LeadershipCards />
-        </motion.div>
+          {/* Name + bio — centered */}
+          <div className='absolute inset-0 z-10 flex flex-col items-center justify-center px-8 md:px-16 text-center gap-6'>
+            <h1 className='font-corinthia text-[5rem] sm:text-[7rem] md:text-[9rem] lg:text-[11rem] text-white leading-none select-none'>
+              Angela Weigl
+            </h1>
+            <p className='font-tt-ramillas-extralight text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl'>
+              {BIO}
+            </p>
+            <p className='font-tt-ramillas-extralight text-lg md:text-xl text-white/50 leading-relaxed max-w-2xl'>
+              {BIO_2}
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <motion.div 
-          className='w-full md:w-1/2 md:ml-[50%] flex flex-col justify-center z-[10] py-20 md:mt-[400px] px-6 md:px-20'
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-        >
-          <WhatImSection />
-        </motion.div>
-        
-        <div className='h-[300vh]'></div>
+      <StickySection heading="Experience" zIndex={20}>
+        <ExperienceCards />
+      </StickySection>
+
+      <StickySection heading="Leadership" zIndex={30}>
+        <LeadershipCards />
+      </StickySection>
+
+      <StickySection heading="What I'm..." zIndex={40} minHeight="150vh">
+        <WhatImSection />
+      </StickySection>
+
     </div>
   )
 }

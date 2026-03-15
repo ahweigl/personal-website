@@ -16,34 +16,37 @@ html {
   }
 }
 
-@font-face{
-  font-family: 'NotoSerifDisplay-Light';
-  src: url('/NotoSerifDisplay-Light.ttf') format('truetype');
-  font-weight: 300;
+@font-face {
+  font-family: 'Cotta';
+  src: url('/CottaFree.otf') format('opentype');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'NotoSerifDisplay-ExtraLight';
-  src: url('/NotoSerifDisplay-Thin.ttf') format('truetype');
-  font-weight: 200;
+  font-family: 'Swell';
+  src: url('/Swell-Regular.otf') format('opentype');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 .font-tt-ramillas {
-  font-family: 'NotoSerifDisplay-Light';
+  font-family: 'Cotta';
 }
 
 .font-tt-ramillas-extralight {
-  font-family: 'NotoSerifDisplay-ExtraLight';
+  font-family: var(--font-dm-sans), sans-serif;
   font-weight: 200;
 }
 
 .font-tt-ramillas-light {
-  font-family: 'NotoSerifDisplay-Light';
-  font-weight: 300;
+  font-family: 'Cotta';
+}
+
+.font-corinthia {
+  font-family: 'Swell', cursive;
 }
 
 /* Navbar hover pulse and glow animations */
