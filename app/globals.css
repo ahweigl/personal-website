@@ -16,45 +16,59 @@ html {
   }
 }
 
-@font-face{
-  font-family: 'NotoSerifDisplay-Light';
-  src: url('/NotoSerifDisplay-Light.ttf') format('truetype');
-  font-weight: 300;
+@font-face {
+  font-family: 'Cotta';
+  src: url('/CottaFree.otf') format('opentype');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'NotoSerifDisplay-ExtraLight';
-  src: url('/NotoSerifDisplay-Thin.ttf') format('truetype');
-  font-weight: 200;
+  font-family: 'Swell';
+  src: url('/Swell-Regular.otf') format('opentype');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 .font-tt-ramillas {
-  font-family: 'NotoSerifDisplay-Light';
+  font-family: 'roc-grotesk', sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .font-tt-ramillas-extralight {
-  font-family: 'NotoSerifDisplay-ExtraLight';
+  font-family: 'roc-grotesk', sans-serif;
   font-weight: 200;
+  font-style: normal;
 }
 
 .font-tt-ramillas-light {
-  font-family: 'NotoSerifDisplay-Light';
-  font-weight: 300;
+  font-family: 'roc-grotesk', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.font-corinthia {
+  font-family: 'Swell', cursive;
+}
+
+.font-butik {
+  font-family: 'butik-display-normal', sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* Navbar hover pulse and glow animations */
 @keyframes navPulse {
   0%, 100% {
     transform: scale(1);
-    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+    filter: drop-shadow(0 0 0px rgba(246, 253, 255, 0));
   }
   50% {
     transform: scale(1.05);
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+    filter: drop-shadow(0 0 8px rgba(246, 253, 255, 0.6));
   }
 }
 

@@ -25,7 +25,7 @@ const StarIcon = ({ size, pulseScale, isStationary }: {
     width={size}
     height={size}
     viewBox="0 0 24 24"
-    fill="white"
+    fill="#F6FDFF"
     xmlns="http://www.w3.org/2000/svg"
     style={{
       transform: `translate(-50%, -50%) scale(${pulseScale})`,
@@ -48,7 +48,7 @@ const TrailDot = ({ point, index }: { point: TrailPoint; index: number }) => {
       style={{ transform: `translate(${point.x}px, ${point.y}px)` }}
     >
       <div
-        className="rounded-full bg-white blur-sm"
+        className="rounded-full bg-[#F6FDFF] blur-sm"
         style={{
           width: size,
           height: size,

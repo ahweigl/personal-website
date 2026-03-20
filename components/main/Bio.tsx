@@ -1,31 +1,20 @@
 "use client"
 
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const BIO_TEXT = "I'm a full-stack developer and Honors CS and Business student at Northeastern University, combining my love for technology and creativity to build digital experiences that make a difference.";
 
 const Bio = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className='flex flex-col items-center justify-center py-20 w-full z-[20]'
-    >
+    <div className='flex flex-col items-center justify-center py-20 w-full z-[20]'>
       <div className='max-w-[800px] w-full flex flex-col gap-8'>
-        <motion.p
-          className="font-tt-ramillas-extralight text-lg md:text-xl text-white text-center leading-relaxed"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-        >
+        <p className="font-tt-ramillas-extralight text-lg md:text-3xl text-[#F6FDFF] text-center leading-relaxed">
           {BIO_TEXT}
           <br />
-        </motion.p>
+        </p>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
-export default Bio; 
+export default Bio;

@@ -37,3 +37,6 @@ next-env.d.ts
 
 # personal files
 TODO.md
+
+# Claude
+/.claude/
