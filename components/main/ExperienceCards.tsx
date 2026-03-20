@@ -19,7 +19,7 @@ const ExperienceCards = () => {
         <h3 className={`font-tt-ramillas-light text-2xl md:text-3xl mb-2 ${heading}`}>Reddit</h3>
         <p className={`font-tt-ramillas-extralight text-lg mb-3 ${sub}`}>Software Engineer I · NYC</p>
         <p className={`font-tt-ramillas-extralight text-sm leading-relaxed ${body}`}>
-          Incoming Backend Software Engineer on Reddit's Spam Prevention team within Reddit Safety.
+          Incoming Backend Software Engineer on Reddit&apos;s Spam Prevention team within Reddit Safety.
         </p>
       </div>
 
