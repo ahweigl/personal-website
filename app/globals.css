@@ -33,31 +33,42 @@ html {
 }
 
 .font-tt-ramillas {
-  font-family: 'Cotta';
+  font-family: 'roc-grotesk', sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .font-tt-ramillas-extralight {
-  font-family: var(--font-dm-sans), sans-serif;
+  font-family: 'roc-grotesk', sans-serif;
   font-weight: 200;
+  font-style: normal;
 }
 
 .font-tt-ramillas-light {
-  font-family: 'Cotta';
+  font-family: 'roc-grotesk', sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .font-corinthia {
   font-family: 'Swell', cursive;
 }
 
+.font-butik {
+  font-family: 'butik-display-normal', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* Navbar hover pulse and glow animations */
 @keyframes navPulse {
   0%, 100% {
     transform: scale(1);
-    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+    filter: drop-shadow(0 0 0px rgba(246, 253, 255, 0));
   }
   50% {
     transform: scale(1.05);
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+    filter: drop-shadow(0 0 8px rgba(246, 253, 255, 0.6));
   }
 }
 

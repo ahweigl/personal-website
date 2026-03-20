@@ -8,7 +8,7 @@ const Bio = () => {
   return (
     <div className='flex flex-col items-center justify-center py-20 w-full z-[20]'>
       <div className='max-w-[800px] w-full flex flex-col gap-8'>
-        <p className="font-tt-ramillas-extralight text-lg md:text-xl text-white text-center leading-relaxed">
+        <p className="font-tt-ramillas-extralight text-lg md:text-3xl text-[#F6FDFF] text-center leading-relaxed">
           {BIO_TEXT}
           <br />
         </p>

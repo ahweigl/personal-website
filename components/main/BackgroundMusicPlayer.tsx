@@ -88,7 +88,7 @@ const BackgroundMusicPlayer: React.FC = () => {
               animate={{ opacity: 1, width: 320, height: 'auto' }}
               exit={{ opacity: 0, width: 80, height: 80 }}
               transition={{ duration: 0.3 }}
-              className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl border border-white border-opacity-30 shadow-[0_0_15px_rgba(255,255,255,0.25)] p-4"
+              className="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl border border-white border-opacity-30 shadow-[0_0_15px_rgba(246,253,255,0.25)] p-4"
             >
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
@@ -99,11 +99,11 @@ const BackgroundMusicPlayer: React.FC = () => {
                     height={20}
                     className="w-5 h-5"
                   />
-                  <span className="text-white text-sm font-tt-ramillas-light">Now Playing</span>
+                  <span className="text-[#F6FDFF] text-sm font-tt-ramillas-light">Now Playing</span>
                 </div>
                 <button
                   onClick={() => setIsExpanded(false)}
-                  className="text-white hover:text-gray-300 transition-colors"
+                  className="text-[#F6FDFF] hover:text-[#F6FDFF]/80 transition-colors"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
@@ -112,12 +112,12 @@ const BackgroundMusicPlayer: React.FC = () => {
               </div>
 
               <div className="mb-3">
-                <h4 className="text-white text-sm font-tt-ramillas-light truncate">{currentTrack?.title}</h4>
-                <p className="text-gray-300 text-xs font-tt-ramillas-extralight truncate">{currentTrack?.artist}</p>
+                <h4 className="text-[#F6FDFF] text-sm font-tt-ramillas-light truncate">{currentTrack?.title}</h4>
+                <p className="text-[#F6FDFF]/80 text-xs font-tt-ramillas-extralight truncate">{currentTrack?.artist}</p>
               </div>
 
               <div className="mb-3 text-center">
-                <div className="text-xs text-gray-400">
+                <div className="text-xs text-[#F6FDFF]/60">
                   {formatTime(currentTime)}
                 </div>
               </div>
@@ -128,8 +128,8 @@ const BackgroundMusicPlayer: React.FC = () => {
                   disabled={currentTrackIndex === 0}
                   className={`transition-colors ${
                     currentTrackIndex === 0 
-                      ? 'text-gray-500 cursor-not-allowed' 
-                      : 'text-white hover:text-gray-300'
+                      ? 'text-[#F6FDFF]/40 cursor-not-allowed' 
+                      : 'text-[#F6FDFF] hover:text-[#F6FDFF]/80'
                   }`}
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -142,11 +142,11 @@ const BackgroundMusicPlayer: React.FC = () => {
                   className="bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-2 transition-all duration-200"
                 >
                   {isPlaying ? (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#F6FDFF">
                       <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
                     </svg>
                   ) : (
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#F6FDFF">
                       <path d="M8 5v14l11-7z"/>
                     </svg>
                   )}
@@ -157,8 +157,8 @@ const BackgroundMusicPlayer: React.FC = () => {
                   disabled={currentTrackIndex >= tracks.length - 1}
                   className={`transition-colors ${
                     currentTrackIndex >= tracks.length - 1
-                      ? 'text-gray-500 cursor-not-allowed' 
-                      : 'text-white hover:text-gray-300'
+                      ? 'text-[#F6FDFF]/40 cursor-not-allowed' 
+                      : 'text-[#F6FDFF] hover:text-[#F6FDFF]/80'
                   }`}
                 >
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -175,7 +175,7 @@ const BackgroundMusicPlayer: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               onClick={() => setIsExpanded(true)}
-              className="nav-pulse-hover bg-white bg-opacity-10 backdrop-blur-md rounded-full w-16 h-16 border border-white border-opacity-30 shadow-[0_0_15px_rgba(255,255,255,0.25)] flex items-center justify-center hover:bg-opacity-20 transition-all duration-200"
+              className="nav-pulse-hover bg-white bg-opacity-10 backdrop-blur-md rounded-full w-16 h-16 border border-white border-opacity-30 shadow-[0_0_15px_rgba(246,253,255,0.25)] flex items-center justify-center hover:bg-opacity-20 transition-all duration-200"
             >
               <Image
                 src="/music-icon.png"

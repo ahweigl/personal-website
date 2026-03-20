@@ -37,7 +37,7 @@ export default function StickySection({ heading, children, zIndex, minHeight = '
 
         {/* Left column — heading pinned */}
         <div ref={headingRef} className='w-1/2 px-8 md:px-16 pt-24 flex-shrink-0'>
-          <h2 className='font-tt-ramillas-light text-4xl md:text-5xl lg:text-6xl text-white leading-none'>
+          <h2 className='font-tt-ramillas-light text-4xl md:text-5xl lg:text-6xl text-[#F6FDFF] leading-none'>
             {heading}
           </h2>
         </div>

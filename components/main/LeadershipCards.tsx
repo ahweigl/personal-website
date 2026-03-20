@@ -4,10 +4,10 @@ import React from 'react'
 
 const LeadershipCards = () => {
   const card = 'bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.08)] relative w-full max-w-[600px]'
-  const heading = 'text-white'
-  const sub = 'text-gray-300'
-  const body = 'text-gray-400'
-  const badge = 'bg-white/10 px-3 py-1 rounded-full text-xs font-tt-ramillas-extralight text-gray-300'
+  const heading = 'text-[#F6FDFF]'
+  const sub = 'text-[#F6FDFF]/80'
+  const body = 'text-[#F6FDFF]/60'
+  const badge = 'bg-[#F6FDFF]/10 px-3 py-1 rounded-full text-xs font-tt-ramillas-extralight text-[#F6FDFF]/80'
 
   return (
     <div className='w-full flex flex-col gap-10 max-w-[600px]'>

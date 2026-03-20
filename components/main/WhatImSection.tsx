@@ -27,7 +27,7 @@ const whatImData: WhatImItem[] = [
   },
   {
     category: "enjoying",
-    items: ["my cat Gibson", "yoga", "my fujifilm x100v camera", "skiing wherever I can", "bouldering", "maintaining my 65+ week Beli streak"],
+    items: ["my cat Gibson", "yoga", "my fujifilm x100v camera", "skiing wherever I can", "bouldering", "maintaining my 70+ week Beli streak"],
     icon: "/sparkle-icon.png"
   }
 ]
@@ -49,7 +49,7 @@ const WhatImSection = () => {
                 height={24}
                 className="w-6 h-6"
               />
-              <h3 className="font-tt-ramillas-light text-xl md:text-2xl text-white">
+              <h3 className="font-tt-ramillas-light text-xl md:text-2xl text-[#F6FDFF]">
                 {item.category}
               </h3>
             </div>
@@ -57,7 +57,7 @@ const WhatImSection = () => {
               {item.items.map((listItem) => (
                 <span
                   key={listItem}
-                  className="bg-white/10 px-3 py-1 rounded-full text-xs font-tt-ramillas-extralight text-gray-300"
+                  className="bg-white/10 px-3 py-1 rounded-full text-xs font-tt-ramillas-extralight text-[#F6FDFF]/80"
                 >
                   {listItem}
                 </span>

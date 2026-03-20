@@ -32,6 +32,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/zzr2qke.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/obt7zqt.css" />
+      </head>
       <body className={`${dmSans.variable} font-tt-ramillas bg-[#000914] overflow-y-scroll overflow-x-hidden`}>
         <MusicProvider 
           defaultTracks={backgroundSongs}
