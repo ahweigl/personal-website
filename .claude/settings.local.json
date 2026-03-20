@@ -9,7 +9,9 @@
       "Bash(grep -r \"text-\\\\\\(white\\\\|gray\\\\\\)\" components/ app/ --include=*.tsx --include=*.ts -n)",
       "Bash(grep -r \"shadow\\\\|bg-white\\\\|border-white\\\\|fill=\\\\|color=\" components/ app/ --include=*.tsx --include=*.ts -n)",
       "Bash(grep -r \"color=\\\\|fill=\\\\|#[a-fA-F0-9]\\\\{3,6\\\\}\\\\|rgb\\\\|hsl\" components/ app/ --include=*.tsx --include=*.ts -n)",
-      "Bash(grep -r \"text-\\\\|shadow-\\\\|bg-\\\\|border-\\\\|fill=\\\\|color=\" components/ app/ --include=*.tsx -n)"
+      "Bash(grep -r \"text-\\\\|shadow-\\\\|bg-\\\\|border-\\\\|fill=\\\\|color=\" components/ app/ --include=*.tsx -n)",
+      "Bash(git ls-tree:*)",
+      "Bash(grep -E '\\\\.\\(tsx|ts\\)$')"
     ]
   }
 }

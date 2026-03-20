@@ -33,18 +33,18 @@ export default function StickySection({ heading, children, zIndex, minHeight = '
   return (
     <div ref={wrapperRef} data-snap-section style={{ zIndex, position: 'relative', minHeight }}>
       <div className='sticky top-0 h-screen overflow-hidden flex flex-col'>
-        <div className='flex flex-1 min-h-0'>
+        <div className='flex flex-col md:flex-row flex-1 min-h-0'>
 
-        {/* Left column — heading pinned */}
-        <div ref={headingRef} className='w-1/2 px-8 md:px-16 pt-24 flex-shrink-0'>
-          <h2 className='font-tt-ramillas-light text-4xl md:text-5xl lg:text-6xl text-[#F6FDFF] leading-none'>
+        {/* Heading — centered on mobile, left column on desktop */}
+        <div ref={headingRef} className='w-full md:w-1/2 px-6 md:px-16 pt-20 md:pt-24 pb-4 md:pb-0 flex-shrink-0 text-center md:text-left'>
+          <h2 className='font-tt-ramillas-light text-3xl md:text-5xl lg:text-6xl text-[#F6FDFF] leading-none'>
             {heading}
           </h2>
         </div>
 
-        {/* Right column — cards scroll upward, right-aligned */}
-        <div className='w-1/2 h-screen overflow-hidden flex-shrink-0'>
-          <motion.div ref={cardsRef} style={{ y: cardsY }} className='pt-24 pr-8 md:pr-16 pb-16 flex flex-col items-end'>
+        {/* Cards — centered on mobile, right column on desktop */}
+        <div className='w-full md:w-1/2 h-screen overflow-hidden flex-shrink-0'>
+          <motion.div ref={cardsRef} style={{ y: cardsY }} className='pt-6 md:pt-24 px-6 md:px-0 md:pr-16 pb-16 flex flex-col items-center md:items-end'>
             {children}
           </motion.div>
         </div>

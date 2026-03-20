@@ -3,7 +3,7 @@
 import React from 'react'
 
 const LeadershipCards = () => {
-  const card = 'bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.08)] relative w-full max-w-[600px]'
+  const card = 'bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.08)] relative w-full max-w-[600px] mx-auto md:mx-0'
   const heading = 'text-[#F6FDFF]'
   const sub = 'text-[#F6FDFF]/80'
   const body = 'text-[#F6FDFF]/60'
