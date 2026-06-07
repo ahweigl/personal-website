@@ -3,15 +3,28 @@
 import React from 'react'
 
 const LeadershipCards = () => {
-  const card = 'bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.08)] relative w-full max-w-[600px] mx-auto md:mx-0'
+  const card = 'bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.08)] relative w-full max-w-[350px] md:max-w-[400px]'
   const heading = 'text-[#F6FDFF]'
   const sub = 'text-[#F6FDFF]/80'
   const body = 'text-[#F6FDFF]/60'
   const badge = 'bg-[#F6FDFF]/10 px-3 py-1 rounded-full text-xs font-tt-ramillas-extralight text-[#F6FDFF]/80'
 
   return (
-    <div className='w-full flex flex-col gap-10 max-w-[600px]'>
+    <div className='w-full flex flex-col md:flex-row gap-8 items-center md:items-start justify-center px-6 md:px-16'>
 
+      {/* NCWIT — left */}
+      <div className={card}>
+        <div className="absolute top-4 right-4">
+          <span className={badge}>August 2022 – Present</span>
+        </div>
+        <h3 className={`font-tt-ramillas-light text-2xl md:text-3xl mb-2 ${heading}`}>NCWIT Campus Rep</h3>
+        <p className={`font-tt-ramillas-extralight text-lg mb-3 ${sub}`}>Campus Representative</p>
+        <p className={`font-tt-ramillas-extralight text-sm leading-relaxed ${body}`}>
+          Leading outreach, event planning, and community engagement efforts at Northeastern & the greater Boston area for NCWIT, fostering community for women and other minorities pursuing careers in technology.
+        </p>
+      </div>
+
+      {/* Sandbox — center */}
       <div className={card}>
         <div className="absolute top-4 right-4">
           <span className={badge}>January 2023 – Present</span>
@@ -51,17 +64,7 @@ const LeadershipCards = () => {
         </div>
       </div>
 
-      <div className={card}>
-        <div className="absolute top-4 right-4">
-          <span className={badge}>August 2022 – Present</span>
-        </div>
-        <h3 className={`font-tt-ramillas-light text-2xl md:text-3xl mb-2 ${heading}`}>NCWIT Campus Rep</h3>
-        <p className={`font-tt-ramillas-extralight text-lg mb-3 ${sub}`}>Campus Representative</p>
-        <p className={`font-tt-ramillas-extralight text-sm leading-relaxed ${body}`}>
-          Leading outreach, event planning, and community engagement efforts at Northeastern & the greater Boston area for NCWIT, fostering community for women and other minorities pursuing careers in technology.
-        </p>
-      </div>
-
+      {/* AASIA — right */}
       <div className={card}>
         <div className="absolute top-4 right-4">
           <span className={badge}>August 2024 – May 2025</span>
